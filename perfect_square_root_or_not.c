@@ -1,31 +1,17 @@
-#include <stdio.h>
-#include <math.h>
- 
-/*function definition*/
-int isPerfectSquare(int number)
-{
-    int iVar;
-    float fVar;
- 
-    fVar=sqrt((double)number);
-    iVar=fVar;
- 
-    if(iVar==fVar)
-        return 1;
-    else
-        return 0;
-}
- 
-int main()
-{
-    int num;
-    
-    scanf("%d",&num);
- 
-    if(isPerfectSquare(num))
+#include<stdio.h>
+int main(){
+    int n,i,res;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        if((i*i)==n){
+            res=1;
+            break;
+        }
+    }
+    if(res==1){
         printf("True");
-    else
+    }
+    else{
         printf("False");
-     
-    return 0;
+    }
 }
